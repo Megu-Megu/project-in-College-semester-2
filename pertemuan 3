@@ -1,0 +1,62 @@
+#penggunaan tanda petik 3 (''')
+objek = '''hello 
+    saya 
+suka 
+    belajar 
+string'''
+
+print(objek)
+
+
+#len
+budi = "hello"
+print(len(budi))
+for x in "banana":
+    print(x)
+print(budi[1])
+
+#tuple
+this = ("apple","banana", "cherry")
+print(this)
+print(this[1])
+print(len(this))
+#one item tuple
+this = ("apple",)
+print(this)
+#bukan tuple
+this = ("apple")
+print(this)
+
+#set
+my_set={1,2,3}
+print(my_set)
+my_set = {1.0, "hello" , (1,2,3,) , "budi"}
+print(my_set)
+book_set = set(("harry potter", "angels and demon", "atlas shrugged" ))
+print(book_set)
+
+#dictionary 
+coba_dict = {
+    "nomor" : 20
+}
+
+print(coba_dict)
+
+#mengambil value
+print(coba_dict.get("nomor"))
+print(coba_dict["nomor"])
+
+list = [1,2,3,"A",11213,"@",-7,1*5,100-80]
+
+print(list[0])
+print(list[1])
+print(list[2])
+print(list[3])
+print(list[4])
+print(list[5])
+print(list[6])
+print(list[7])
+print(list[8])
+
+list.append(input("masukan angka : "))
+print(list[9])
