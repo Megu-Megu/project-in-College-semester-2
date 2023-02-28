@@ -1,0 +1,54 @@
+Nama = "M.Rinaldi Pratama"
+NPm = "5220411244"
+
+#1
+print("nama saya : ", Nama)
+
+#2
+print("nama saya : "+ Nama)
+
+#3
+print("nama saya : {}".format(Nama))
+
+#4 
+print("nama saya : %s" %(Nama))
+
+#mengubah str jadi kapital
+print(Nama.upper())
+
+#mengubah str jadi kecil
+print(Nama.lower())
+
+#mencari nomor hp yang awalannya +62
+no_hp = str ("+6289676546037")
+print(no_hp.startswith("+62"))
+if no_hp.startswith("+62"):
+    print("nomor hp indonesia")
+
+#mencari gmai; dari kumpulan email
+email = "budi123@gmail.com"
+if email.endswith("gmail.com"):
+    print("ini alamat gmail")
+
+#memisahkan kata dalam kalimat
+kalimat = "ini,ibu,budi"
+print(kalimat.split(",",1))
+
+#mengetahui dimana letak data 
+list1 = ["budi", "rizal","noni"]
+for i,item in enumerate(list1):
+    print(f"index ke - {i} adalah {item} " )
+
+#looping di str 
+for i in Nama:
+    print(i)
+
+#mengubah nama 
+bhs = ["budi.py","bibi.php","geni.css"]
+list2 = []
+for item in bhs:
+    if item.endswith(".php"):
+        list2.append(item.replace(".php",".py"))
+    else:
+        list2.append(item)
+print(list2)
