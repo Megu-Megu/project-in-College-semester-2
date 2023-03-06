@@ -1,0 +1,27 @@
+daftar_pemain_bola = {
+    "1" : "Thibaut Courtois",
+    "2" : "Dani Carvajal",
+    "3" : "Éder Militão",
+    "4" : "David Alaba",
+    "5" : "Jesús Vallejo",
+    "6" : "Nacho",
+    "7" : "Eden Hazard",
+    "8" : "Toni Kroos",
+    "9" : "Karim Benzema",
+    "10": "Luka Modrić", 
+    "11": "Marco Asensio",
+}
+def menu():
+    print("Menu")
+    print("1. tampilkan semua  ")
+    print("2. pilih salah satu  ")
+def command():
+    menu()
+    pilih = input("masukan pilihan menu : ")
+    if pilih == "1": 
+        for key in daftar_pemain_bola: 
+            print(f"{key} adalah nomor punggung dari {daftar_pemain_bola[key]}")
+    if pilih == "2":
+        no = input("masukan nomor punggung yang dicari : (1-11)")
+        print("nomor punggung : " , (no), "adalah" , daftar_pemain_bola.get(no))
+command()
