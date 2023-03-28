@@ -1,0 +1,95 @@
+#Soal NO 1(Genap) mencari nilai minimum
+class Node :
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+class LinkedList:
+    def __init__(self,value):
+        new_node = Node(value)
+        self.head = new_node
+        self.tail = new_node
+        self.length = 1
+
+    def print_list(self):
+        temp = self.head
+        while temp is not None:
+            print(temp.value)
+            temp = temp.next
+    def append(self,value):
+        new_node = Node(value)
+        if self.length == 0 :
+            self.head = new_node
+            self.tail = new_node
+        else:
+            self.tail.next = new_node
+            self.tail = new_node
+        self.length += 1
+        return True
+    def get(self,index):
+        if index < 0 or index >= self.length:
+            return None
+        temp = self.head
+        for _ in range(index):
+            temp = temp.next
+        return temp
+    def sort(self):
+       current = self.head
+       index = None
+
+       if(self.head == None):
+           return None
+       else:
+            while(current != None):
+                index = current.next
+                while(index != None):
+                    if (current.value > index.value):
+                        temp = current.value
+                        current.value = index.value
+                        index.value = temp
+                    index = index.next
+                current = current.next
+if __name__=="__main__":
+    ll = LinkedList(12)
+    ll.append(10)
+    ll.append(7)
+    ll.append(8)
+    ll.append(19)
+    ll.append(11)
+    ll.sort()
+    print(f"Nilai Minimum untuk no 1 adalah : " , ll.get(0).value)
+
+
+#Soal No 3 . menambah data berbentuk list ke linked list
+class Node :
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+class LinkedList:
+    def __init__(self,value):
+        new_node = Node(value)
+        self.head = new_node
+        self.tail = new_node
+        self.length = 1
+
+    def print_list(self):
+        temp = self.head
+        while temp is not None:
+            print(temp.value)
+            temp = temp.next
+    def append(self, list):
+        for value in list:
+            list = Node(value)
+            if self.length == 0:
+                self.head = list
+                self.tail = list
+            else:
+                self.tail.next = list
+                self.tail = list
+
+if __name__=="__main__":
+    ll = LinkedList(3)
+    ll.append([2,4,8,6,9,10])
+    print("output no 3 adalah : ")
+    ll.print_list()
