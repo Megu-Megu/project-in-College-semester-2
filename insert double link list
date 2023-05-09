@@ -1,0 +1,23 @@
+#DLL Insert
+def insert(self, index, value): 
+        if index < 0 or index > self.length:
+            return False
+        if index == 0:
+            return self.prepend(value)
+        if index == self.length:
+            return self.append(value)
+        new_node = Node(value)
+        if (index - 1) == 0:
+            temp = self.get(index)
+            self.head.next = new_node
+            new_node.prev = self.head
+            new_node.next = temp 
+        else:         
+            temp = self.get(index-1)
+            temp_next = self.get(index)
+            temp.next = new_node
+            new_node.prev = temp
+            new_node.next = temp_next
+            temp_next.prev = new_node
+            self.length += 1
+        return True
